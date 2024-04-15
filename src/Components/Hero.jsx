@@ -10,6 +10,7 @@ import "./Hero.css";
 import glassy from '../assets/glassy.png'
 import sepstar from '../assets/sepstar.png'
 import {FiArrowRight} from 'react-icons/fi'
+import WaitlistReg from "./WaitlistReg";
 
 const Hero = () => {
   return (
@@ -23,10 +24,12 @@ const Hero = () => {
             Xheta focus on empowering minds and transforming futures. Join the
             waitlist of learning from industry expert and enhance your skill.
           </p>
+      <div data-bs-toggle="modal" data-bs-target="#waitlist">
           <button className="btn btn-lg px-4 text-white"
            style={{backgroundColor:'var(--dark-green)', 
            paddingBlock:'14px', fontSize:'18px', fontWeight:'500', borderRadius:'8px'}}>
             Join the waitlist <FiArrowRight style={{marginBottom:'2px'}}/></button>
+            </div>
         </div>
         <div className="col-md-5" style={{position:'relative'}}>
             <img src={sepstar} alt="avatar-star" className="img-fluid sepstar-top"/>
@@ -60,6 +63,20 @@ const Hero = () => {
         <div className="bg-white line ">
           <img src={netflix} alt="zapier-logo" className="img-fluid" />
         </div>
+        <div
+        className="modal fade"
+        id="waitlist"
+        tabIndex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog mt-4 py-4" role="document">
+          <div className="modal-content">
+            <WaitlistReg/>
+            </div>
+            </div>
+            </div>
       </section>
 </>
   );

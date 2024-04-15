@@ -1,0 +1,22 @@
+
+
+.form-wrapper h3{
+    font-family: Aeonik-reg;
+    font-weight: 500;
+    font-size: 26px;
+    color: #03363D;
+}
+
+.form-container input, .form-container select{
+    background-color: #d2d2d2;
+    border-radius: 7px;
+    padding: 8px 12px;
+    outline: none;
+    border: none;
+}
+
+.form-wrapper p{
+    font-size: 15px;
+    font-family: Aeonik-sm;
+    font-weight: 400;
+}
