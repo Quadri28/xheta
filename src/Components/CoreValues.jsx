@@ -50,8 +50,8 @@ const values=[
       <div className="value-cards ">
         {
             values.map((value)=>(
-            <div className="px-3 py-2 card value-card" key={value.number}>
-                <h4 className="number">{value.number}</h4>
+            <div className="px-4 py-3 card value-card" key={value.number}>
+                <h4 className="number my-2">{value.number}</h4>
                 <h3>{value.header}</h3>
                 <p>{value.body}</p>
             </div>

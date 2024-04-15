@@ -15,7 +15,7 @@
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     place-content: center;
     text-align: center;
-    margin-top: 11rem;
+    margin-top: 7.4rem;
 }
 .logos-container .bg-white{
     padding: 1rem;
@@ -54,7 +54,7 @@
         position: absolute;
         height: 120px;
         background: #fff;
-        transform: skewY(6deg);
+        transform: skewY(5deg);
         left: 0;
         right: 0;
         bottom: -210px;

@@ -8,8 +8,9 @@ section{
     color: var(--dark-green);
 }
 .about-body{
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
+    line-height: 21px;
     color: #303642;
     font-family: Aeonik-sm;
 }
