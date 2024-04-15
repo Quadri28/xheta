@@ -1,0 +1,11 @@
+.nav-btn{
+    background-color: var(--dark-green);
+    color: #fff;
+    font-size: clip('14px 16px 20px');
+    font-family: 'Aeonik-reg';
+    font-weight: 500;
+}
+.nav-btn:hover{
+    background-color: var(--dark-green);
+    color: #fff;
+}

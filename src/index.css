@@ -1,0 +1,36 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden ;
+}
+:root{
+--dark-green: #03363D
+}
+.head{
+  color: var(--dark-green);
+}
+@font-face {
+  font-family: 'Aeonik';
+  src: local(Aeonik), url(./fonts/Aeonik-Bold.otf) format('truetype');
+}
+@font-face {
+  font-family: 'Aeonik-md';
+  src: local(Aeonik), url(./fonts/Aeonik-Medium.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Aeonik-sm';
+  src: local(Aeonik), url(./fonts/Aeonik-Light.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Aeonik-reg';
+  src: local(Aeonik), url(./fonts/Aeonik-Regular.otf) format('truetype');
+
+}

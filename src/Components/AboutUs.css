@@ -1,0 +1,26 @@
+section{
+    margin-block: 5rem;
+}
+.header{
+    font-weight: 500;
+    font-family: Aeonik-reg;
+    font-size: clip(20px 32px 40px);
+    color: var(--dark-green);
+}
+.about-body{
+    font-size: 14px;
+    font-weight: 400;
+    color: #303642;
+    font-family: Aeonik-sm;
+}
+.about-btn{
+    color: #fff;
+    background-color: var(--dark-green);
+    font-size: 17px;
+    font-family: Aeonik-reg;
+    line-height: 20px;
+}
+.about-btn:hover{
+    background-color: var(--dark-green);
+    color: #fff;
+}

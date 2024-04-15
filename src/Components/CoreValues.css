@@ -1,0 +1,40 @@
+.value-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.value-card{
+    outline: none;
+    border: none;
+    box-shadow: 5px 5px 5px 5px #03363D0D;
+    border-radius: 8px;
+}
+.value-card .number{
+    text-align: end;
+    font-weight: 700;
+    font-family: Aeonik;
+    color: #262626;
+    font-size: 50px;
+}
+.value-card h3{
+    color: #303642;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Aeonik-reg;
+}
+
+.value-card p{
+    color: #434343;
+    font-size: 16px;
+    line-height: 19.2px;
+    font-family: Aeonik-sm;
+    font-weight: 400;
+}
+.icon-container{
+    background-color:'#2D575D' !important;
+    padding:'7px 10px';
+    width: 3rem;
+    height: 4rem;
+    border-radius:'5px'
+}

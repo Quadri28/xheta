@@ -1,0 +1,29 @@
+.waitlist-container{
+    position: relative;
+}
+.waitlist-card{
+    left: 10%;
+    position: absolute;
+    top: 30%;
+    padding: 20px 5px;
+  }
+  .waitlist-cta{
+    margin: 1rem 0;
+  }
+  @media screen and (max-width:580px) {
+    .waitlist-card{
+      left: 5%;
+      position: absolute;
+      top: 10%;
+      padding: 5px 2px;
+      width: 80%;
+      
+    }
+    .waitlist-header{
+        margin-bottom: 1rem;
+        font-size: 18px;
+    }
+    .waitlist-cta{
+        margin: 0;
+    }
+}
