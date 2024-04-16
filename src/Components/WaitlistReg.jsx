@@ -4,6 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from 'yup'
 
 const WaitlistReg = () => {
+    
   const initialValues = {
     email: "",
     firstName: "",
@@ -64,7 +65,8 @@ const WaitlistReg = () => {
         </Field>
         </div>
         <div className="d-flex mt-3">
-            <button className="btn btn-md w-100 text-white" style={{backgroundColor:'#03363D'}}>Register your interest</button>
+            <button className="btn btn-md w-100 text-white" type="button"
+            style={{backgroundColor:'#03363D'}}>Register your interest</button>
         </div>
         </div>
       </Form>

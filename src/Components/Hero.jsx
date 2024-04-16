@@ -17,28 +17,28 @@ const Hero = () => {
     <>
     <div className="hero-section py-5 px-3">
       <div className="row container mx-auto justify-content-between 
-      hero-container align-items-center g-3" style={{marginBottom:'5rem'}}>
+      hero-container align-items-center g-3">
         <div className="col-md-6">
-          <h3 className="hero-header">Unlock Your Learning and Creative Potential</h3>
-          <p className="hero-para">
+          <h3 className="hero-header text-white">Unlock Your Learning and Creative Potential</h3>
+          <p className="hero-para text-white">
             Xheta focus on empowering minds and transforming futures. Join the
             waitlist of learning from industry expert and enhance your skill.
           </p>
       <div data-bs-toggle="modal" data-bs-target="#waitlist">
-          <button className="btn btn-lg px-4 text-white"
-           style={{backgroundColor:'var(--dark-green)', 
+          <button className="btn btn-lg px-4"
+           style={{backgroundColor:'#CDD7D8', color:'var(--dark-green)', fontFamily:'Aeonik-reg',
            paddingBlock:'14px', fontSize:'18px', fontWeight:'500', borderRadius:'8px'}}>
             Join the waitlist <FiArrowRight style={{marginBottom:'2px'}}/></button>
             </div>
         </div>
-        <div className="col-md-5" style={{position:'relative'}}>
+        <div className="col-md-6" style={{position:'relative'}}>
             <img src={sepstar} alt="avatar-star" className="img-fluid sepstar-top"/>
-            <img src={glassy} alt="hero-img" className="img-fluid"/>
+            <img src={glassy} alt="hero-img" className="img-fluid" style={{objectFit:'cover'}}/>
             <img src={sepstar} alt="avatar-star" className="img-fluid sepstar-bottom"/>
         </div>
       </div>
       </div>
-      <section
+      <div
         className="logos-container mx-auto container py-4 rounded-2"
         style={{ boxShadow: "5px 5px 5px 5px #03363D0D" }}
       >
@@ -77,7 +77,7 @@ const Hero = () => {
             </div>
             </div>
             </div>
-      </section>
+      </div>
 </>
   );
 };

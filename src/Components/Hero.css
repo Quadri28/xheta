@@ -1,6 +1,6 @@
 
 .hero-section{
-    background-color: #FFFAD7;
+    background-color: var(--dark-green);
     overflow: hidden;
 }
 
@@ -15,7 +15,7 @@
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     place-content: center;
     text-align: center;
-    margin-top: 7.4rem;
+    margin: 3rem 0 5rem;
 }
 .logos-container .bg-white{
     padding: 1rem;
@@ -45,21 +45,5 @@
     }
     .logos-container{
         margin-top: 3rem !important;
-    }
-}
-
-@media screen and (min-width:900px) {
-    .hero-section::before{
-        content: '';
-        position: absolute;
-        height: 120px;
-        background: #fff;
-        transform: skewY(5deg);
-        left: 0;
-        right: 0;
-        bottom: -210px;
-    }
-    .hero-section{
-    border-bottom-right-radius: 5rem;
     }
 }

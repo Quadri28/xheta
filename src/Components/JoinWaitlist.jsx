@@ -9,7 +9,7 @@ const JoinWaitlist = () => {
     <div
       style={{
         backgroundImage: "linear-gradient(to right, #03363D, #0890A3)",
-        marginBottom: "8rem",
+        marginBottom: "4rem",
       }}
       className="text-center waitlist-container"
     >
