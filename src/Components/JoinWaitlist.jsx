@@ -3,6 +3,7 @@ import headphone from "../assets/headphone.png";
 import "./JoinWaitlist.css";
 import { FiArrowRight } from "react-icons/fi";
 import WaitlistReg from "./WaitlistReg";
+import { LiaTimesSolid } from "react-icons/lia";
 
 const JoinWaitlist = () => {
   return (
@@ -61,6 +62,8 @@ const JoinWaitlist = () => {
       >
         <div className="modal-dialog mt-4 py-4" role="document">
           <div className="modal-content">
+          <div className="d-flex justify-content-end">
+        </div>
             <WaitlistReg />
           </div>
         </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./WaitList.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from 'yup'
+import { LiaTimesSolid } from "react-icons/lia";
 
 const WaitlistReg = () => {
     
@@ -33,6 +34,10 @@ const WaitlistReg = () => {
   };
   return (
     <div className="card p-4 form-wrapper">
+      <div className="d-flex justify-content-end">
+        <button style={{marginBottom:'1rem'}} type="button" className="btn-close" data-bs-dismiss='modal'>
+        </button>
+      </div>
         <h3>Join the Xheta Waitlist for Exclusive Benefits</h3>
       <p>
         Sign up for our waitlist today and be part of an educational experience
