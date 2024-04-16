@@ -32,22 +32,23 @@ const Gain = () => {
       </div>
       <div className="row justify-content-center container mx-auto mt-4 gap-2 g-3">
         <div className="d-flex gap-3 align-items-center col-md-5">
-          <div
+          <button
             style={{
               backgroundColor: "#2D575D",
               borderRadius: "5px",
-              width:'100px', height:'50px'
+              width:'100px', height:'50px',
+              border:'none'
             }}
             className="d-flex justify-content-center align-items-center"
           >
             <img src={h} alt="h-icon" className="img-fluid fs-5" />
-          </div>
+          </button>
           <div className="row ">
             <span
               style={{
                 fontWeight: "700",
                 fontSize: "18px",
-                color: "#333333",
+                color: "#1D1D1D",
                 fontFamily: "Aeonik-reg",
               }}
             >
@@ -60,22 +61,23 @@ const Gain = () => {
           </div>
         </div>
         <div className="d-flex gap-3 align-items-center col-md-5">
-          <div
+          <button
             style={{
               backgroundColor: "#2D575D",
               borderRadius: "5px",
-              width:'100px', height:'50px'
+              width:'100px', height:'50px',
+              border:'none'
             }}
             className="d-flex justify-content-center align-items-center"
           >
-            <img src={arrow} alt="h-icon" className="img-fluid fs-5" />
-          </div>
+            <img src={arrow} alt="h-icon" className="img-fluid" height='30px'/>
+          </button>
           <div className="row ">
             <span
               style={{
                 fontWeight: "700",
                 fontSize: "18px",
-                color: "#333333",
+                color: "#1d1d1d",
                 fontFamily: "Aeonik-reg",
               }}
             >
@@ -88,22 +90,22 @@ const Gain = () => {
           </div>
         </div>
         <div className="d-flex gap-3 align-items-center col-md-5">
-          <div
+          <button
             style={{
               backgroundColor: "#2D575D",
               borderRadius: "5px",
-              width:'100px', height:'50px'
+              width:'130px', height:'50px',
+              border:'none'
             }}
-            className="d-flex justify-content-center align-items-center"
           >
-            <img src={users} alt="h-icon" className="img-fluid fs-5" />
-          </div>
+            <img src={users} alt="h-icon" className="img-fluid" height='30px'/>
+          </button>
           <div className="row">
             <span
               style={{
                 fontWeight: "700",
                 fontSize: "18px",
-                color: "#333333",
+                color: "#1d1d1d",
                 fontFamily: "Aeonik-reg",
               }}
             >
@@ -116,22 +118,23 @@ const Gain = () => {
           </div>
         </div>
         <div className="d-flex gap-3 align-items-center col-md-5">
-          <div
+          <button
             style={{
               backgroundColor: "#2D575D",
               borderRadius: "5px",
-              width:'100px', height:'50px'
+              width:'100px', height:'50px',
+              border:'none'
             }}
             className="d-flex justify-content-center align-items-center"
           >
             <img src={sparkles} alt="h-icon" className="img-fluid fs-5" />
-          </div>
+          </button>
           <div className="row">
             <span
               style={{
                 fontWeight: "700",
                 fontSize: "18px",
-                color: "#333333",
+                color: "#1d1d1d",
                 fontFamily: "Aeonik-reg",
               }}
             >
