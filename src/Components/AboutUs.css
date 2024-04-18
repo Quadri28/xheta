@@ -22,6 +22,6 @@ section{
     line-height: 20px;
 }
 .about-btn:hover{
-    background-color: var(--dark-green);
+    background-color: #102A2D;
     color: #fff;
 }

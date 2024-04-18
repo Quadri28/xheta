@@ -10,6 +10,13 @@
     font-weight: 700;
     font-family: Aeonik;
 }
+.hero-btn{
+    background-color: #CDD7D8;
+    color: var(--dark-green);
+}
+.hero-btn:hover{
+    background-color: #ABBCBE;
+}
 .logos-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));

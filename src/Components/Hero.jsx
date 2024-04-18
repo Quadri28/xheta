@@ -11,6 +11,7 @@ import glassy from '../assets/glassy.png'
 import sepstar from '../assets/sepstar.png'
 import {FiArrowRight} from 'react-icons/fi'
 import WaitlistReg from "./WaitlistReg";
+import {ToastContainer} from 'react-toastify'
 
 const Hero = () => {
   return (
@@ -25,8 +26,8 @@ const Hero = () => {
             waitlist of learning from industry expert and enhance your skill.
           </p>
       <div data-bs-toggle="modal" data-bs-target="#waitlist">
-          <button className="btn btn-lg px-4"
-           style={{backgroundColor:'#CDD7D8', color:'var(--dark-green)', fontFamily:'Aeonik-reg',
+          <button className="btn btn-lg px-4 hero-btn"
+           style={{ fontFamily:'Aeonik-reg',
            paddingBlock:'14px', fontSize:'18px', fontWeight:'500', borderRadius:'8px'}}>
             Join the waitlist <FiArrowRight style={{marginBottom:'2px'}}/></button>
             </div>
@@ -78,6 +79,7 @@ const Hero = () => {
             </div>
             </div>
       </div>
+      <ToastContainer/>
 </>
   );
 };

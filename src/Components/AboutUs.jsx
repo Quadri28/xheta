@@ -1,6 +1,7 @@
 import React from "react";
 import operator from "../assets/operator.png";
 import "./AboutUs.css";
+import WaitlistReg from "./WaitlistReg";
 
 const AboutUs = () => {
   return (
@@ -24,7 +25,12 @@ const AboutUs = () => {
           environment that fosters curiosity, critical thinking, and lifelong
           learning.
         </p>
+        <div
+          data-bs-toggle="modal"
+          data-bs-target="#waitlist"
+        >
         <button className="about-btn btn btn-md py-3 mt-2 px-3">Get early access</button>
+        </div>
       </div>
     </section>
   );

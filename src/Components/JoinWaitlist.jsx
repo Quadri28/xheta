@@ -52,22 +52,6 @@ const JoinWaitlist = () => {
           </button>
         </div>
       </div>
-      <div
-        className="modal fade"
-        id="waitlist"
-        tabIndex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog mt-4 py-4" role="document">
-          <div className="modal-content">
-          <div className="d-flex justify-content-end">
-        </div>
-            <WaitlistReg />
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

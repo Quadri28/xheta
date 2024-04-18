@@ -39,7 +39,7 @@ const Gain = () => {
               width:'100px', height:'50px',
               border:'none'
             }}
-            className="d-flex justify-content-center align-items-center"
+           
           >
             <img src={h} alt="h-icon" className="img-fluid fs-5" />
           </button>
@@ -68,7 +68,7 @@ const Gain = () => {
               width:'100px', height:'50px',
               border:'none'
             }}
-            className="d-flex justify-content-center align-items-center"
+           
           >
             <img src={arrow} alt="h-icon" className="img-fluid" height='30px'/>
           </button>
@@ -125,7 +125,7 @@ const Gain = () => {
               width:'100px', height:'50px',
               border:'none'
             }}
-            className="d-flex justify-content-center align-items-center"
+           
           >
             <img src={sparkles} alt="h-icon" className="img-fluid fs-5" />
           </button>
