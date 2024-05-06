@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { toast, ToastContainer } from "react-toastify";
 import ErrorText from "./ErrorText";
 import axios from "./axios";
+import {FaCheckCircle} from 'react-icons/fa'
 
 const WaitlistReg = () => {
   const initialValues = {
@@ -42,7 +43,7 @@ const WaitlistReg = () => {
         toast('Your registration was successful', {
           type: "success",
           pauseOnHover: true,
-          autoClose: true,
+          autoClose: false,
         })
         actions.resetForm()
       }
@@ -132,6 +133,7 @@ const WaitlistReg = () => {
         </Form>
       </Formik>
       <ToastContainer />
+     
     </div>
   );
 };

@@ -81,7 +81,7 @@ const Gain = () => {
                 fontFamily: "Aeonik-reg",
               }}
             >
-              Sneek Peeks
+              Sneak Peeks
             </span>
             <span style={{fontSize:'15px'}}>
               Get exclusive sneak peeks and insights into our platform's
