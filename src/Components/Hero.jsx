@@ -8,7 +8,6 @@ import notion from "../assets/notion.png";
 import spotify from "../assets/spotify.png";
 import "./Hero.css";
 import glassy from '../assets/glassy.png'
-import sepstar from '../assets/sepstar.png'
 import {FiArrowRight} from 'react-icons/fi'
 import WaitlistReg from "./WaitlistReg";
 import {ToastContainer} from 'react-toastify'
@@ -16,26 +15,24 @@ import {ToastContainer} from 'react-toastify'
 const Hero = () => {
   return (
     <>
-    <div className="hero-section py-5 px-3">
-      <div className="row container mx-auto justify-content-between 
-      hero-container align-items-center g-3">
-        <div className="col-md-6">
+    <div className="hero-section  pb-0">
+      <div className="d-flex flex-wrap justify-content-between
+       align-items-center gap-2">
+        <div className="col-md-5" style={{marginLeft:'auto'}}>
           <h3 className="hero-header text-white">Unlock Your Learning and Creative Potential</h3>
           <p className="hero-para text-white">
             Xheta focus on empowering minds and transforming futures. Join the
             waitlist of learning from industry expert and enhance your skill.
           </p>
       <div data-bs-toggle="modal" data-bs-target="#waitlist">
-          <button className="btn btn-lg px-4 hero-btn"
+          <button className="btn btn-lg px-4 hero-btn mt-3"
            style={{ fontFamily:'Aeonik-reg',
            paddingBlock:'14px', fontSize:'18px', fontWeight:'500', borderRadius:'8px'}}>
             Join the waitlist <FiArrowRight style={{marginBottom:'2px'}}/></button>
             </div>
         </div>
         <div className="col-md-6" style={{position:'relative'}}>
-            <img src={sepstar} alt="avatar-star" className="img-fluid sepstar-top"/>
             <img src={glassy} alt="hero-img" className="img-fluid" style={{objectFit:'cover'}}/>
-            <img src={sepstar} alt="avatar-star" className="img-fluid sepstar-bottom"/>
         </div>
       </div>
       </div>

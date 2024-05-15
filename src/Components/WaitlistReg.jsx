@@ -6,8 +6,23 @@ import { toast, ToastContainer } from "react-toastify";
 import ErrorText from "./ErrorText";
 import axios from "./axios";
 import {FaCheckCircle} from 'react-icons/fa'
+import Modal from 'react-modal'
+import CopyToClipboard from "react-copy-to-clipboard";
+import { BsCopy } from "react-icons/bs";
+import { LiaTimesCircle } from "react-icons/lia";
 
 const WaitlistReg = () => {
+
+  const [openModal, setOpenModal]= useState(false)
+  const [copied, setCopied]= useState(false)
+
+  const modalIsOpen =()=>{
+    setOpenModal(true)
+  }
+
+  const closeModal =()=>{
+    setOpenModal(false)
+  }
   const initialValues = {
     email: "",
     firstName: "",
@@ -17,15 +32,14 @@ const WaitlistReg = () => {
   };
 
   const phoneRegex =
-    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,7}$/;
+    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,7}$/
   const validationSchema = Yup.object({
     email: Yup.string().email().required().label("Email"),
     firstName: Yup.string().min(3).required().label("First Name"),
     lastName: Yup.string().min(3).required().label("Last Name"),
     phoneNumber: Yup.string()
-      .matches(phoneRegex)
-      .required()
-      .label("Phone Number"),
+      .matches(phoneRegex, 'Invalid phone number')
+      .required(),
     gender: Yup.string().required().label("Gender"),
   });
 
@@ -40,11 +54,7 @@ const WaitlistReg = () => {
     axios
       .post("waiting-list", payload)
       .then(() =>{
-        toast('Your registration was successful', {
-          type: "success",
-          pauseOnHover: true,
-          autoClose: false,
-        })
+       modalIsOpen()
         actions.resetForm()
       }
       )
@@ -57,6 +67,22 @@ const WaitlistReg = () => {
       });
       actions.resetForm()
   };
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      borderRadius: "2rem",
+      width: "320px",
+      overFlowY: "scroll",
+      zIndex: 9999,
+    },
+  };
+
   return (
     <div className="card p-4 form-wrapper">
       <div className="d-flex justify-content-end">
@@ -120,7 +146,7 @@ const WaitlistReg = () => {
               </Field>
               <ErrorMessage name="gender" component={ErrorText} />
             </div>
-            <div className="d-flex mt-3">
+            <div className="d-flex mt-3" data-bs-dismiss='modal'>
               <button
                 className="btn btn-md w-100 text-white"
                 type="submit"
@@ -133,7 +159,32 @@ const WaitlistReg = () => {
         </Form>
       </Formik>
       <ToastContainer />
-     
+      <Modal
+          isOpen={openModal}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+          ariaHideApp={false}
+        >
+        <div className="d-flex justify-content-end mb-3">
+            <LiaTimesCircle onClick={()=>closeModal()} style={{cursor:'pointer', fontSize:'20px', color:'#ddd'}}/>
+        </div>
+          <div className="text-center">
+            <span> <FaCheckCircle style={{fontSize:'30px'}} className="text-success mb-2"/></span>
+            <p style={{color:'#1d1d1d', fontSize:'18px'}}>You have created your account successfully</p>
+            <p>Skip ahead in line by referring your friends using this link below</p>
+            <div>https://www.xheta.com 
+            <CopyToClipboard text="https://www.xheta.com" onCopy={()=>setCopied(true)}>
+            <BsCopy style={{marginLeft:'5px', cursor:'pointer'}} />
+            </CopyToClipboard>
+           <p> {copied ? 'Copied' : '' } </p>
+            </div>
+            <button to='/dashboard' onClick={()=>closeModal()}className="btn w-100 mt-2"
+             style={{fontWeight:'700', color:'#686868',
+              borderRadius:'12px', border:'solid 1px #ddd'}}>
+              Dismiss</button>
+          </div>
+        </Modal>
     </div>
   );
 };
