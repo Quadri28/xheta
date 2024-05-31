@@ -3,7 +3,7 @@ import operator from "../assets/operator.png";
 import "./AboutUs.css";
 import WaitlistReg from "./WaitlistReg";
 
-const AboutUs = () => {
+const AboutUs = ({modalOpen}) => {
   return (
     <section className="row mx-auto py-4 justify-content-between container g-3">
       <img src={operator} alt="avatar" className="img-fluid col-lg-6 col-md-6 col-sm-6" />
@@ -29,7 +29,7 @@ const AboutUs = () => {
           data-bs-toggle="modal"
           data-bs-target="#waitlist"
         >
-        <button className="about-btn btn btn-md py-3 mt-2 px-3">Get early access</button>
+        <button className="about-btn btn btn-md py-3 mt-2 px-3" onClick={()=>modalOpen()}>Get early access</button>
         </div>
       </div>
     </section>

@@ -1,29 +1,37 @@
 .waitlist-container{
-    position: relative;
+  position: relative;
 }
 .waitlist-card{
-    left: 10%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 5px;
+}
+.waitlist-cta{
+  margin: 12px 0;
+  font-size: 18px;
+}
+.waitlist-header{
+  margin-block: 1rem;
+}
+@media screen and (max-width:580px) {
+  .waitlist-card{
     position: absolute;
-    top: 30%;
-    padding: 20px 5px;
+    padding: 10px 2px;
+    width: 80%;
+  }
+  .waitlist-header{
+    font-size: 16px;
   }
   .waitlist-cta{
-    margin: 1rem 0;
+    font-size: 14px !important;
   }
-  @media screen and (max-width:580px) {
-    .waitlist-card{
-      left: 7%;
-      position: absolute;
-      top: 10%;
-      padding: 5px 2px;
-      width: 80%;
-      
-    }
-    .waitlist-header{
-        margin-bottom: 1rem;
-        font-size: 18px;
-    }
-    .waitlist-cta{
-        margin: 0;
-    }
+  .waitlist-header{
+      margin-bottom: 1rem;
+      font-size: 18px;
+  }
+  .waitlist-cta{
+      margin: 0;
+  }
 }

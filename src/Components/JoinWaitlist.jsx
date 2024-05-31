@@ -5,7 +5,7 @@ import { FiArrowRight } from "react-icons/fi";
 import WaitlistReg from "./WaitlistReg";
 import { LiaTimesSolid } from "react-icons/lia";
 
-const JoinWaitlist = () => {
+const JoinWaitlist = ({modalOpen}) => {
   return (
     <div
       style={{
@@ -24,7 +24,7 @@ const JoinWaitlist = () => {
           Join the waitlist
         </span>
         <h3
-          className="text-center my-3 waitlist-header"
+          className="text-center waitlist-header"
           style={{
             color: "#303642",
             fontFamily: "Aeonik-reg",
@@ -47,6 +47,7 @@ const JoinWaitlist = () => {
               fontSize: "18px",
               borderRadius: "8px",
             }}
+            onClick={()=>modalOpen()}
           >
             Join the waitlist <FiArrowRight style={{ marginBottom: "2px" }} />
           </button>

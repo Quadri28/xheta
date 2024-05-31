@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./WaitList.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -10,25 +10,19 @@ import Modal from 'react-modal'
 import CopyToClipboard from "react-copy-to-clipboard";
 import { BsCopy } from "react-icons/bs";
 import { LiaTimesCircle } from "react-icons/lia";
+import useScreenSize from "./ScreenSizeHook";
 
-const WaitlistReg = () => {
+const WaitlistReg = ({isOpen, setIsOpen, openModal,
+   setOpenModal, copied, setCopied, closeModal, modalIsClosed,
+   modalIsOpen,modalOpen}) => {
 
-  const [openModal, setOpenModal]= useState(false)
-  const [copied, setCopied]= useState(false)
-
-  const modalIsOpen =()=>{
-    setOpenModal(true)
-  }
-
-  const closeModal =()=>{
-    setOpenModal(false)
-  }
   const initialValues = {
     email: "",
     firstName: "",
     lastName: "",
     phoneNumber: "",
     gender: "",
+    role:''
   };
 
   const phoneRegex =
@@ -41,6 +35,7 @@ const WaitlistReg = () => {
       .matches(phoneRegex, 'Invalid phone number')
       .required(),
     gender: Yup.string().required().label("Gender"),
+    role: Yup.string().required()
   });
 
   const onSubmit = (values, actions) => {
@@ -50,6 +45,7 @@ const WaitlistReg = () => {
       last_name: values.lastName,
       phone_number: values.phoneNumber,
       gender: values.gender,
+      role: values.role
     };
     axios
       .post("waiting-list", payload)
@@ -68,6 +64,7 @@ const WaitlistReg = () => {
       actions.resetForm()
   };
 
+  const {width} = useScreenSize()
   const customStyles = {
     content: {
       top: "50%",
@@ -77,24 +74,31 @@ const WaitlistReg = () => {
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
       borderRadius: "2rem",
-      width: "320px",
+      width: width > 1000 ? '700px' : width >= 700 ? '500px' : '330px',
       overFlowY: "scroll",
       zIndex: 9999,
     },
   };
 
+  useEffect(()=>{
+    setTimeout(modalOpen, 2000)
+  },[])
+
   return (
-    <div className="card p-4 form-wrapper">
+    <>
+    <Modal
+          isOpen={isOpen}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+          ariaHideApp={false}
+        >
+    <div className="form-wrapper">
       <div className="d-flex justify-content-end">
-        <button
-          style={{ marginBottom: "1rem" }}
-          type="button"
-          className="btn-close"
-          data-bs-dismiss="modal"
-        ></button>
+      <LiaTimesCircle onClick={()=>closeModal()} style={{cursor:'pointer', fontSize:'20px', color:'#ddd'}}/>
       </div>
-      <h3>Join the Xheta Waitlist for Exclusive Benefits</h3>
-      <p>
+      <h3 className="text-center reg-header">Join the Xheta Waitlist for Exclusive Benefits</h3>
+      <p className="text-center reg-para">
         Sign up for our waitlist today and be part of an educational experience
         that knows no boundaries! Kindly fill the form below to register your
         interest.
@@ -146,6 +150,17 @@ const WaitlistReg = () => {
               </Field>
               <ErrorMessage name="gender" component={ErrorText} />
             </div>
+            <div className="d-flex flex-column gap-1">
+              <label htmlFor="role" className="text-start">
+                Select Role
+              </label>
+              <Field type="text" name="role" as="select">
+                <option value="">Select</option>
+                <option value="tutor">Tutor</option>
+                <option value="learner">Learner</option>
+              </Field>
+              <ErrorMessage name="role" component={ErrorText} />
+            </div>
             <div className="d-flex mt-3" data-bs-dismiss='modal'>
               <button
                 className="btn btn-md w-100 text-white"
@@ -158,16 +173,18 @@ const WaitlistReg = () => {
           </div>
         </Form>
       </Formik>
-      <ToastContainer />
+      </div>
+      </Modal>
+
       <Modal
           isOpen={openModal}
-          onRequestClose={closeModal}
+          onRequestClose={modalIsClosed}
           style={customStyles}
           contentLabel="Example Modal"
           ariaHideApp={false}
         >
         <div className="d-flex justify-content-end mb-3">
-            <LiaTimesCircle onClick={()=>closeModal()} style={{cursor:'pointer', fontSize:'20px', color:'#ddd'}}/>
+            <LiaTimesCircle onClick={()=>modalIsClosed()} style={{cursor:'pointer', fontSize:'20px', color:'#ddd'}}/>
         </div>
           <div className="text-center">
             <span> <FaCheckCircle style={{fontSize:'30px'}} className="text-success mb-2"/></span>
@@ -185,7 +202,8 @@ const WaitlistReg = () => {
               Dismiss</button>
           </div>
         </Modal>
-    </div>
+        <ToastContainer />
+    </>
   );
 };
 

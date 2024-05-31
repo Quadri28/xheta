@@ -40,7 +40,7 @@ const values=[
   return (
     <section className="container my-5 px-3">
       <h4 className="text-center header mb-2">Core Values</h4>
-      <p className="text-center mb-3" style={{color:'#303642', lineHeight:'19.2px', fontWeight:'400'}}>
+      <p className="text-center mb-3" style={{color:'#303642', lineHeight:'19.2px', fontWeight:'400', fontSize:'15px'}}>
         At XHETA, our aim is to balance physical education with online education
         and make learning accessible to all. Whether you’re a student preparing
         for exams, an adult seeking to acquire new skills, or an educator

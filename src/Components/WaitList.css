@@ -6,11 +6,14 @@
     font-size: 26px;
     color: #03363D;
 }
-
+.form-container label{
+font-size: 14px;
+}
 .form-container input, .form-container select{
     background-color: #d2d2d2;
     border-radius: 7px;
-    padding: 8px 12px;
+    padding-inline: 12px;
+    height: 2.2rem;
     outline: none;
     border: none;
 }
@@ -19,4 +22,13 @@
     font-size: 15px;
     font-family: Aeonik-sm;
     font-weight: 400;
+}
+
+@media screen and (max-width: 480px) {
+    .reg-para{
+        font-size: 13px !important;
+    }
+    .reg-header{
+        font-size: 17px !important;
+    }
 }
